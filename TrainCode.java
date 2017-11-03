@@ -26,18 +26,3 @@ public class Main {
 	}
 	
 }
-    public static int isSlurpy2(String str)
-    {
-        String temp = str.replaceAll("AB", " ");
-        int n = str.length() - temp.length();
-        String regex = "(AH|(AB){%d}(AH|A([DE]F+)+GC)C{%d}|A([DE]F+)+GC)([DE]F+)+G";
-        regex = String.format(regex, n, n);
-        if (Pattern.compile(regex).matcher(str).matches())
-        {
-            return 1;
-        }
-        else
-        {
-            return 0;
-        }
-    }
